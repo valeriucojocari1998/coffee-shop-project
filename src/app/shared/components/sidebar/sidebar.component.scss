@@ -1,8 +1,12 @@
+@import "src/styles/colors/colors.scss";
+
 .sidebar {
   width: 60px;
   font-size: 14px;
-  background-color: #523f36;
-  color: whitesmoke;
+  background-color: $rock;
+  color: $whiteSmoke;
+  display: flex;
+  flex-direction: column;
   .sidebar-expanded {
     display: none;
   }
@@ -36,25 +40,28 @@
         width: 200px;
         right: -200px;
         top: 0;
-        background-color: #523f36;
+        background-color: $rock;
       }
       &:hover {
-        background-color: #856658;
+        background-color: $beaver;
         .sidebar-action-dropdown {
           display: block;
           padding: 5px 0;
           .dropdown-item {
-            color: whitesmoke;
+            color: $whiteSmoke;
             &:hover,
             &:focus,
             &:active,
             &.active {
-              background-color: #856658;
+              background-color: $beaver;
               cursor: pointer;
             }
           }
         }
       }
     }
+  }
+  .sidebar-footer {
+    margin-top: auto;
   }
 }

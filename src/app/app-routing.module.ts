@@ -4,15 +4,24 @@ import { WrapperComponent } from './shared/components/wrapper/wrapper.component'
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
-  },
-  {
     path: 'home',
     component: WrapperComponent,
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'products',
+    component: WrapperComponent,
+    loadChildren: () =>
+      import('./modules/products/products.module').then(
+        (m) => m.ProductsModule
+      ),
+  },
+  // has to be last one
+  {
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
 

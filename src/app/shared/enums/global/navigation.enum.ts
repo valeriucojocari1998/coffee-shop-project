@@ -14,6 +14,10 @@ export const NavigationKeys = {
     icon: 'bi-flower1',
     tabs: [
       {
+        label: 'Products Board',
+        route: '/products/board',
+      },
+      {
         label: 'Coffee Beans',
         route: '/products/beans',
       },
