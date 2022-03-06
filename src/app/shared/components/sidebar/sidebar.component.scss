@@ -1,0 +1,60 @@
+.sidebar {
+  width: 60px;
+  font-size: 14px;
+  background-color: #523f36;
+  color: whitesmoke;
+  .sidebar-expanded {
+    display: none;
+  }
+  .sidebar-collapsed {
+    display: block;
+  }
+  &:hover {
+    width: 150px;
+    .sidebar-expanded {
+      display: block;
+    }
+    .sidebar-collapsed {
+      display: none;
+    }
+  }
+  .bi {
+    font-size: 25px;
+  }
+  .company-name {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .sidebar-actions {
+    margin-top: 50px;
+    .sidebar-action {
+      position: relative;
+      .sidebar-action-dropdown {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        width: 200px;
+        right: -200px;
+        top: 0;
+        background-color: #523f36;
+      }
+      &:hover {
+        background-color: #856658;
+        .sidebar-action-dropdown {
+          display: block;
+          padding: 5px 0;
+          .dropdown-item {
+            color: whitesmoke;
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+              background-color: #856658;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

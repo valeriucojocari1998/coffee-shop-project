@@ -1,5 +1,9 @@
-<app-sidebar></app-sidebar>
-<div>
-  <app-topbar></app-topbar>
-  <router-outlet></router-outlet>
+<div class="d-flex h-100">
+  <app-sidebar class="position-fixed h-100"></app-sidebar>
+  <div class="main-wrapper">
+    <app-topbar></app-topbar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

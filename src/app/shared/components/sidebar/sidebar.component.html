@@ -1,3 +1,25 @@
-<p>
-  sidebar works!
-</p>
+<div class="h-100 sidebar">
+  <div class="pt-3 px-2 d-flex align-items-center">
+    <i class="bi bi-cup-fill px-1"></i>
+    <div class="sidebar-expanded company-name">Coffee Shop</div>
+  </div>
+  <div class="sidebar-actions">
+    <div
+      class="p-2 d-flex align-items-center sidebar-action"
+      *ngFor="let nav of navigationKeys"
+    >
+      <i class="bi px-1" [ngClass]="nav.icon"></i>
+      <div class="sidebar-expanded">{{ nav.label }}</div>
+      <div class="sidebar-action-dropdown">
+        <div
+          class="dropdown-item d-flex align-items-center"
+          *ngFor="let item of nav.tabs"
+          [routerLink]="[item.route]"
+          routerLinkActive="active"
+        >
+          {{ item.label }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

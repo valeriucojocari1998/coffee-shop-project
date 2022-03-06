@@ -11,7 +11,8 @@ const routes: Routes = [
   {
     path: 'home',
     component: WrapperComponent,
-    loadChildren: () => import('./modules/home/home.module'),
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
   },
 ];
 
