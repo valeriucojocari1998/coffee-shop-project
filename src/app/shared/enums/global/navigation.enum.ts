@@ -1,6 +1,6 @@
 export const NavigationKeys = {
   Home: {
-    label: 'Home',
+    label: 'Main',
     icon: 'bi-house-fill',
     tabs: [
       {
